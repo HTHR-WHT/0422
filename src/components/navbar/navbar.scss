@@ -1,27 +1,83 @@
 @import "../../global.scss";
 
 .navbar {
-  background-color: whitesmoke;
+  background-color: white;
   color: $mainColor;
   width: 100%;
   height: 4.375rem;
   position: fixed;
   top: 0;
   z-index: 2;
-}
+  transition: all 1s ease;
 
-.wrapper {
-  padding: 0.625rem 1.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .wrapper {
+    padding: 0.625rem 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  .left {
-    .logo {
-      font-size: 40px;
-      font-weight: 700;
-      text-decoration: none;
-      color: inherit;
+    .left {
+      display: flex;
+      align-items: center;
+
+      .hamburger {
+        display: flex;
+        width: 2rem;
+        height: 1.563rem;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 1.75rem;
+        cursor: pointer;
+
+        span {
+          width: 100%;
+          height: 0.188rem;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+
+      .logo {
+        font-size: 40px;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .right {
+      .itemContainer {
+        display: flex;
+        align-items: center;
+        margin-left: 1.875rem;
+
+        .icon {
+          font-size: 2.25rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $mainColor;
+    color: white;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 }
