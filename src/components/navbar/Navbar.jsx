@@ -13,7 +13,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             <span className="line3"></span>
           </div>
           <a href="#intro" className="logo">
-            hthr-wht.
+            howdy.
           </a>
         </div>
         <div className="right">
@@ -23,10 +23,22 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedInIcon className="icon" fontSize="large" aria-label="linkedIn link" />
+              <LinkedInIcon
+                className="icon"
+                fontSize="large"
+                aria-label="linkedIn link"
+              />
             </a>
-            <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
-            <GitHubIcon className="icon" fontSize="large" aria-label="github repo link" />
+            <a
+              href="https://github.com/HTHR-WHT"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon
+                className="icon"
+                fontSize="large"
+                aria-label="github repo link"
+              />
             </a>
           </div>
         </div>

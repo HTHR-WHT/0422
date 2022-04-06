@@ -10,7 +10,7 @@ const Intro = () => {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["software engineer", "artist", "designer"],
+      strings: ["code.", "create.", "collaborate."],
     });
   }, []);
 
@@ -23,7 +23,7 @@ const Intro = () => {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>Howdy. I'm</h2>
+          <h2>software engineer</h2>
           <h1>Heather White</h1>
           <h3>
             <span ref={textRef}></span>
