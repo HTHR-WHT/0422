@@ -13,7 +13,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             <span className="line3"></span>
           </div>
           <a href="#intro" className="logo">
-            howdy.
+            hthr-wht.
           </a>
         </div>
         <div className="right">
