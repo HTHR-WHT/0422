@@ -3,6 +3,7 @@ import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
 import Connect from "./components/connect/Connect";
+import Menu from "./components/menu/Menu";
 import "./app.scss";
 import { useState } from "react";
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="app">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
         <Portfolio />
