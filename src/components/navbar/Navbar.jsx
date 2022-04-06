@@ -18,8 +18,16 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
         </div>
         <div className="right">
           <div className="itemContainer">
-            <LinkedInIcon className="icon" />
-            <GitHubIcon className="icon" />
+            <a
+              href="https://www.linkedin.com/in/heather-white-nyc/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon className="icon" fontSize="large" aria-label="linkedIn link" />
+            </a>
+            <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
+            <GitHubIcon className="icon" fontSize="large" aria-label="github repo link" />
+            </a>
           </div>
         </div>
       </div>
