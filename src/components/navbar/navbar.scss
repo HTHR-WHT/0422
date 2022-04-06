@@ -21,10 +21,14 @@
       align-items: center;
 
       .logo {
-        font-size: 40px;
+        font-size: 2.5rem;
         font-weight: 700;
         text-decoration: none;
         color: inherit;
+
+        &:hover {
+          color: #ff571a;
+        }
       }
 
       .hamburger {
@@ -50,11 +54,16 @@
       .itemContainer {
         display: flex;
         align-items: center;
-        margin-left: 1.875rem;
+        margin-left: 2rem;
 
         .icon {
           font-size: 2.25rem;
           margin-right: 1rem;
+          color: $mainColor;
+
+          &:hover {
+            color: #ff571a;
+          }
         }
       }
     }
