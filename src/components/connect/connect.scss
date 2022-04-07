@@ -1,3 +1,85 @@
+@import "../../global.scss";
+
 .connect {
   background-color: #d6d3f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .top {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 0rem auto;
+    overflow: hidden;
+    z-index: 2;
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin: auto 1rem;
+
+      h2 {
+        display: flex;
+        font-size: 2rem;
+        align-items: center;
+      }
+
+      img {
+        width: 15%;
+        margin: 1rem;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
+      margin: auto 3rem auto 0.5rem;
+      height: 100%;
+
+      .download {
+        width: 20rem;
+        height: 2.25rem;
+        color: white;
+        background-color: $mainColor;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin: 1rem auto 1rem 1rem;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex: 7;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5rem;
+  }
 }
