@@ -45,7 +45,6 @@ const Skills = () => {
         "Firebase",
         "p5.js",
       ],
-      featured: true,
     },
     {
       id: 3,
@@ -75,7 +74,7 @@ const Skills = () => {
     <div className="skills" id="skills">
       <div className="container">
         {data.map((d) => (
-          <div key={d.id} className={d.featured ? "card featured" : "card"}>
+          <div key={d.id} className="card">
             <div className="top">
               <img className="icon" src={d.icon} alt="" />
               <h3>{d.title}</h3>

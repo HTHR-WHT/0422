@@ -1,9 +1,11 @@
 $mainColor: #ff7f50;
 
-$width: 768px;
+$smallWidth: 47.938rem;
+// $mediumWidth: 992px;
+// $largeWidth: 1200px;
 
 @mixin mobile {
-  @media (max-width: #{$width}) {
+  @media (max-width: #{$smallWidth}) {
     @content;
   }
 }

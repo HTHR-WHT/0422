@@ -18,7 +18,13 @@
     align-items: center;
     margin: 1rem auto 0rem auto;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
+
+    @include mobile {
+      width: 400px;
+      height: 60px;
+      margin-top: 0rem;
+    }
 
     .left {
       flex: 1;
@@ -31,11 +37,20 @@
         display: flex;
         font-size: 2rem;
         align-items: center;
+
+        @include mobile {
+          font-size: 1rem;
+          padding-left: 0.5rem;
+        }
       }
 
       img {
         width: 15%;
         margin: 1rem;
+
+        @include mobile {
+          width: 30%;
+        }
       }
     }
 
@@ -47,6 +62,11 @@
       justify-content: space-around;
       margin: auto 3rem auto 0.5rem;
       height: 100%;
+
+      @include mobile {
+        margin-left: -1rem;
+        margin-right: 2.5rem;
+      }
 
       .download {
         width: 20rem;
@@ -63,12 +83,22 @@
         &:focus {
           outline: none;
         }
+
+        @include mobile {
+          width: 7rem;
+          font-size: 0.75rem;
+        }
       }
 
       img {
         width: 50px;
         height: 50px;
         margin: 1rem auto 1rem 1rem;
+
+        @include mobile {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
@@ -81,5 +111,9 @@
     flex-direction: column;
     justify-content: center;
     margin-top: -5rem;
+
+    @include mobile {
+      margin-top: -0.3rem;
+    }
   }
 }

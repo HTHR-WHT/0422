@@ -25,6 +25,8 @@ const Intro = () => {
         <div className="wrapper">
           <h2>software engineer</h2>
           <h1>Heather White</h1>
+          <h1 className="mobileH">Heather</h1>
+          <h1 className="mobileW">White</h1>
           <h3>
             <span ref={textRef}></span>
           </h3>
