@@ -84,12 +84,12 @@ const Portfolio = () => {
               </div>
               <div className="right">
                 <div className="rightContainer">
-                  <p>{d.description}</p>
-                  <p>
+                  <p className="desc">{d.description}</p>
+                  <p className="tech">
                     TECH: <br></br>
                     {d.tech}
                   </p>
-                  <p>
+                  <p className="focus">
                     FOCUS: <br></br>
                     {d.work}
                   </p>

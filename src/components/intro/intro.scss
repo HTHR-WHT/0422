@@ -4,6 +4,11 @@
   background-color: #f8f8ff;
   display: flex;
 
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .left {
     flex: 0.5;
     overflow: hidden;
@@ -18,16 +23,30 @@
       justify-content: center;
       float: right;
       margin-top: 1.5rem;
+
+      @include mobile {
+        align-items: flex-start;
+        padding-top: 4rem;
+        padding-right: 5rem;
+      }
     }
 
     img {
       height: 90%;
+
+      @include mobile {
+        height: 50%;
+      }
     }
   }
 
   .right {
     flex: 0.5;
     position: relative;
+
+    @include mobile {
+      margin-top: -5rem;
+    }
 
     .wrapper {
       width: 100%;
@@ -37,12 +56,43 @@
       flex-direction: column;
       justify-content: center;
 
+      @include mobile {
+        display: flex;
+        padding-left: 0.5rem;
+        justify-content: center;
+        align-items: center;
+      }
+
       h1 {
         color: black;
         font-size: 3.75rem;
         font-weight: 700;
         letter-spacing: 0.75rem;
         margin: 1rem 0;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .mobileH {
+        display: none;
+
+        @include mobile {
+          display: flex;
+          font-size: 50px;
+          margin-bottom: 0.25rem;
+        }
+      }
+      .mobileW {
+        display: none;
+
+        @include mobile {
+          display: flex;
+          font-size: 60px;
+          font-weight: 700;
+          margin-top: 0.25rem;
+        }
       }
 
       h2 {
@@ -50,6 +100,10 @@
         font-family: Cabin;
         font-size: 2.188rem;
         letter-spacing: 0.5rem;
+
+        @include mobile {
+          font-size: 30px;
+        }
       }
 
       h3 {
@@ -62,6 +116,11 @@
         font-size: inherit;
         color: $mainColor;
         font-family: Cabin;
+
+        @include mobile {
+          font-size: 22px;
+          padding-left: 1rem;
+        }
       }
 
       .ityped-cursor {
@@ -86,6 +145,10 @@
       img {
         width: 1.875rem;
         animation: arrowBlink 2s infinite;
+
+        @include mobile {
+          padding-left: 1.5rem;
+        }
       }
 
       @keyframes arrowBlink {
