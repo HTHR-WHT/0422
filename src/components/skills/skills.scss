@@ -6,14 +6,14 @@
   flex-direction: column;
   align-items: center;
 
-  @include mobile {
+  @include phone {
     justify-content: space-around;
   }
 
   h1 {
     font-size: 50px;
 
-    @include mobile {
+    @include phone {
       font-size: 18px;
     }
   }
@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
 
-    @include mobile {
+    @include phone {
       flex-direction: column;
       height: 100%;
     }
@@ -43,7 +43,7 @@
       padding: 20px;
       transition: all 1s ease;
 
-      @include mobile {
+      @include phone {
         height: 100%;
         margin: 10px 0;
       }
@@ -58,7 +58,7 @@
         align-items: center;
         justify-content: center;
 
-        @include mobile {
+        @include phone {
           flex-direction: row;
           justify-content: center;
           overflow: hidden;
@@ -71,7 +71,7 @@
             object-fit: cover;
             margin: 0 30px;
 
-            @include mobile {
+            @include phone {
               width: 20px;
               height: 20px;
               margin: 0 1rem;
@@ -82,7 +82,7 @@
           margin: 1rem 0;
           overflow: hidden;
 
-          @include mobile {
+          @include phone {
             font-size: 14px;
           }
         }
@@ -95,7 +95,7 @@
         border-radius: 10px;
         background-color: rgb(250, 244, 245);
 
-        @include mobile {
+        @include phone {
           font-size: 10px;
         }
       }
@@ -110,7 +110,7 @@
           margin: 1rem 0;
           overflow: hidden;
 
-          @include mobile {
+          @include phone {
             font-size: 13px;
           }
         }
@@ -119,7 +119,7 @@
           flex-direction: column;
           margin-left: -40px;
 
-          @include mobile {
+          @include phone {
             dipslay: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -134,7 +134,7 @@
             margin-bottom: 0.1rem;
             overflow: hidden;
 
-            @include mobile {
+            @include phone {
               font-size: 8px;
             }
           }
