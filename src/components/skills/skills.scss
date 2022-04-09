@@ -45,7 +45,7 @@
 
       @include phone {
         height: 100%;
-        margin: 10px 0;
+        margin: 16px 0;
       }
 
       &:hover {
@@ -112,6 +112,7 @@
 
           @include phone {
             font-size: 13px;
+            margin: 0.5rem 0;
           }
         }
         ul {
