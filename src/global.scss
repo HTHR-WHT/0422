@@ -6,12 +6,12 @@ $mainColor: #ff7f50;
 /*
 BREAKPOINTS
 */
-$smallPhone: 20rem; //320px
-$phone: 30rem; //480px
-$tablet: 48rem; //768px
-$laptop: 64rem; //1024px
-$desktop: 75rem; //1200px
-$largeDesktop: 120rem; //1920px
+$smallPhone: 23.75rem; //380px - iphone se 320px, se 2020 375px
+$phone: 30rem; //480px - Y! iphone 12 pro 390px, xr 414px,
+$tablet: 48rem; //768px - surface duo 540px, ipad mini 768px, ipad air 820px
+$laptop: 64rem; //1024px - surface pro 912px, nest hub 1024px
+$desktop: 75rem; //1200px - nest hub max 1280px
+$largeDesktop: 120rem; //1920px - 
 
 @mixin smallPhone {
   @media (max-width: #{$smallPhone}) {
