@@ -26,6 +26,10 @@
       @include tablet {
         left: 25px;
       }
+
+      @include laptop {
+        left: 16px;
+      }
     }
 
     &.right {
@@ -34,6 +38,10 @@
 
       @include tablet {
         right: 25px;
+      }
+
+      @include laptop {
+        right: 16px;
       }
     }
   }
@@ -54,7 +62,6 @@
 
     @include tablet {
       height: 60vh;
-      
     }
 
     .container {
@@ -172,7 +179,6 @@
                 font-size: 0.8rem;
                 line-height: 1.25rem;
               }
-
             }
           }
         }
