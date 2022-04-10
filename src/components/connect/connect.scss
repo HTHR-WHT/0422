@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-around;
 
-  @include mobile {
+  @include phone {
     flex-direction: column;
   }
 
@@ -20,10 +20,11 @@
     overflow: hidden;
     z-index: 1;
 
-    @include mobile {
+    @include phone {
       width: 400px;
       height: 60px;
       margin-top: 0rem;
+      padding-top: 1rem;
     }
 
     .left {
@@ -38,7 +39,7 @@
         font-size: 2rem;
         align-items: center;
 
-        @include mobile {
+        @include phone {
           font-size: 1rem;
           padding-left: 0.5rem;
         }
@@ -48,7 +49,7 @@
         width: 15%;
         margin: 1rem;
 
-        @include mobile {
+        @include phone {
           width: 30%;
         }
       }
@@ -63,7 +64,7 @@
       margin: auto 3rem auto 0.5rem;
       height: 100%;
 
-      @include mobile {
+      @include phone {
         margin-left: -1rem;
         margin-right: 2.5rem;
       }
@@ -84,7 +85,7 @@
           outline: none;
         }
 
-        @include mobile {
+        @include phone {
           width: 7rem;
           font-size: 0.75rem;
         }
@@ -95,7 +96,7 @@
         height: 50px;
         margin: 1rem auto 1rem 1rem;
 
-        @include mobile {
+        @include phone {
           width: 40px;
           height: 40px;
         }
@@ -112,7 +113,7 @@
     justify-content: center;
     margin-top: -5rem;
 
-    @include mobile {
+    @include phone {
       margin-top: -0.3rem;
     }
   }

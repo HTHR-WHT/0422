@@ -1,11 +1,73 @@
+/*
+THEME COLOR
+*/
 $mainColor: #ff7f50;
 
-$smallWidth: 47.938rem;
-// $mediumWidth: 992px;
-// $largeWidth: 1200px;
+/*
+BREAKPOINTS
+*/
+$breakpoints: (
+  "smallPhone": 25rem,
+  //380px - N - iphone se 320px, se 2020 375px
+  "phone": 30rem,
+  //480px - Y - iphone 12 pro 390px, xr 414px,
+  "tablet": 48rem,
+  //768px - N - surface duo 540px, ipad mini 768px, ipad air 820px
+  "laptop": 64rem,
+  //1024px - N - surface pro 912px, nest hub 1024px
+  "desktop": 75rem,
+  //1200px - N - nest hub max 1280px
+  "largeDesktop": 120rem,
+  //1920px - N -
+);
 
-@mixin mobile {
-  @media (max-width: #{$smallWidth}) {
+@mixin smallPhone {
+  @media (max-width: map-get($breakpoints, smallPhone)) {
     @content;
   }
 }
+
+@mixin phone {
+  @media (max-width: map-get($breakpoints, phone)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin largeDesktop {
+  @media (max-width: map-get($breakpoints, largeDesktop)) {
+    @content;
+  }
+}
+// flexible breakpoint
+@mixin breakpoint($bp: 0) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+/*
+DEVICES
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+*/

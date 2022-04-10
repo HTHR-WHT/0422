@@ -4,7 +4,7 @@
   background-color: #f8f8ff;
   display: flex;
 
-  @include mobile {
+  @include phone {
     flex-direction: column;
     align-items: center;
   }
@@ -24,18 +24,24 @@
       float: right;
       margin-top: 1.5rem;
 
-      @include mobile {
+      @include smallPhone {
         align-items: flex-start;
-        padding-top: 4rem;
-        padding-right: 5rem;
+        padding-top: 1rem;
+        padding-right: 4rem;
+      }
+
+      @include phone {
+        align-items: flex-start;
+        padding-top: 1rem;
+        padding-right: 0.4rem;
       }
     }
 
     img {
       height: 90%;
 
-      @include mobile {
-        height: 50%;
+      @include phone {
+        height: 60%;
       }
     }
   }
@@ -44,7 +50,7 @@
     flex: 0.5;
     position: relative;
 
-    @include mobile {
+    @include phone {
       margin-top: -5rem;
     }
 
@@ -56,7 +62,14 @@
       flex-direction: column;
       justify-content: center;
 
-      @include mobile {
+      @include smallPhone {
+        display: flex;
+        padding-left: 0rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include phone {
         display: flex;
         padding-left: 0.5rem;
         justify-content: center;
@@ -70,7 +83,7 @@
         letter-spacing: 0.75rem;
         margin: 1rem 0;
 
-        @include mobile {
+        @include phone {
           display: none;
         }
       }
@@ -78,7 +91,7 @@
       .mobileH {
         display: none;
 
-        @include mobile {
+        @include phone {
           display: flex;
           font-size: 50px;
           margin-bottom: 0.25rem;
@@ -87,7 +100,7 @@
       .mobileW {
         display: none;
 
-        @include mobile {
+        @include phone {
           display: flex;
           font-size: 60px;
           font-weight: 700;
@@ -101,7 +114,7 @@
         font-size: 2.188rem;
         letter-spacing: 0.5rem;
 
-        @include mobile {
+        @include phone {
           font-size: 30px;
         }
       }
@@ -117,7 +130,7 @@
         color: $mainColor;
         font-family: Cabin;
 
-        @include mobile {
+        @include phone {
           font-size: 22px;
           padding-left: 1rem;
         }
@@ -146,7 +159,7 @@
         width: 1.875rem;
         animation: arrowBlink 2s infinite;
 
-        @include mobile {
+        @include phone {
           padding-left: 1.5rem;
         }
       }

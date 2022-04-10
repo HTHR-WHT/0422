@@ -7,9 +7,8 @@
   justify-content: center;
   position: relative;
 
-  @include mobile {
+  @include phone {
     overflow: hidden;
-
   }
 
   .arrow {
@@ -17,17 +16,25 @@
     position: absolute;
     cursor: pointer;
 
-    @include mobile {
+    @include phone {
       display: none;
     }
 
     &.left {
       left: 100px;
+
+      @include tablet {
+        left: 25px;
+      }
     }
 
     &.right {
       right: 100px;
       transform: rotateY(180deg);
+
+      @include tablet {
+        right: 25px;
+      }
     }
   }
 
@@ -38,11 +45,16 @@
     left: 0;
     transition: all 1s ease-out;
 
-    @include mobile {
+    @include phone {
       height: 100vh;
       flex-direction: column;
       justify-content: center;
       margin-top: 0rem;
+    }
+
+    @include tablet {
+      height: 60vh;
+      
     }
 
     .container {
@@ -60,10 +72,14 @@
         align-items: center;
         justify-content: center;
 
-        @include mobile {
+        @include phone {
           width: 90%;
           height: 225px;
           margin: 15px 0;
+        }
+
+        @include tablet {
+          width: 80%;
         }
 
         .left {
@@ -81,7 +97,7 @@
             align-items: center;
             justify-content: space-evenly;
 
-            @include mobile {
+            @include phone {
               width: 75px;
               height: 25px;
             }
@@ -90,7 +106,7 @@
               width: 50px;
               cursor: pointer;
 
-              @include mobile {
+              @include phone {
                 width: 20px;
               }
             }
@@ -98,7 +114,7 @@
           h2 {
             font-size: 40px;
 
-            @include mobile {
+            @include phone {
               font-size: 13px;
             }
           }
@@ -107,7 +123,7 @@
             font-family: Cabin;
             font-size: 20px;
 
-            @include mobile {
+            @include phone {
               font-size: 11px;
             }
           }
@@ -115,9 +131,14 @@
           img {
             width: 400px;
 
-            @include mobile {
+            @include phone {
               width: 145px;
               margin-left: 15px;
+            }
+
+            @include tablet {
+              width: 300px;
+              margin-left: 30px;
             }
           }
         }
@@ -141,11 +162,17 @@
               font-size: 1rem;
               line-height: 1.5rem;
 
-              @include mobile {
+              @include phone {
                 font-size: 0.5rem;
                 line-height: 0.5rem;
                 overflow: hidden;
               }
+
+              @include tablet {
+                font-size: 0.8rem;
+                line-height: 1.25rem;
+              }
+
             }
           }
         }
