@@ -48,8 +48,16 @@
         margin: 16px 0;
       }
 
+      @include tablet {
+        margin: 0 12px;
+      }
+
       &:hover {
         transform: scale(1.1);
+
+        @include tablet {
+          transform: scale(1.05);
+        }
       }
 
       .top {
@@ -98,6 +106,10 @@
         @include phone {
           font-size: 10px;
         }
+
+        @include tablet {
+          font-size: .9rem;
+        }
       }
       .bottom {
         display: flex;
@@ -137,6 +149,10 @@
 
             @include phone {
               font-size: 8px;
+            }
+
+            @include tablet {
+              font-size: .9rem;
             }
           }
         }

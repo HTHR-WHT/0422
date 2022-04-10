@@ -22,11 +22,19 @@
 
     &.left {
       left: 100px;
+
+      @include tablet {
+        left: 25px;
+      }
     }
 
     &.right {
       right: 100px;
       transform: rotateY(180deg);
+
+      @include tablet {
+        right: 25px;
+      }
     }
   }
 
@@ -42,6 +50,11 @@
       flex-direction: column;
       justify-content: center;
       margin-top: 0rem;
+    }
+
+    @include tablet {
+      height: 60vh;
+      
     }
 
     .container {
@@ -63,6 +76,10 @@
           width: 90%;
           height: 225px;
           margin: 15px 0;
+        }
+
+        @include tablet {
+          width: 80%;
         }
 
         .left {
@@ -118,6 +135,11 @@
               width: 145px;
               margin-left: 15px;
             }
+
+            @include tablet {
+              width: 300px;
+              margin-left: 30px;
+            }
           }
         }
 
@@ -145,6 +167,12 @@
                 line-height: 0.5rem;
                 overflow: hidden;
               }
+
+              @include tablet {
+                font-size: 0.8rem;
+                line-height: 1.25rem;
+              }
+
             }
           }
         }

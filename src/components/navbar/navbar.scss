@@ -29,6 +29,9 @@
         &:hover {
           color: #ff571a;
         }
+        @include smallPhone {
+          font-size: 1.8rem;
+        }
       }
 
       .hamburger {
