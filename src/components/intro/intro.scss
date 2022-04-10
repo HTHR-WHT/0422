@@ -86,6 +86,10 @@
         @include phone {
           display: none;
         }
+
+        @include desktop {
+          font-size: 3.25rem;
+        }
       }
 
       .mobileH {

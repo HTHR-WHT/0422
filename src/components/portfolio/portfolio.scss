@@ -30,6 +30,10 @@
       @include laptop {
         left: 16px;
       }
+
+      @include desktop {
+        left: 50px;
+      }
     }
 
     &.right {
@@ -42,6 +46,10 @@
 
       @include laptop {
         right: 16px;
+      }
+
+      @include desktop {
+        right: 50px;
       }
     }
   }
