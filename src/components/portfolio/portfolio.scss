@@ -23,16 +23,12 @@
     &.left {
       left: 100px;
 
-      @include tablet {
-        left: 25px;
-      }
-
-      @include laptop {
-        left: 16px;
-      }
-
       @include desktop {
         left: 50px;
+      }
+
+      @include tablet {
+        left: 25px;
       }
     }
 
@@ -40,16 +36,12 @@
       right: 100px;
       transform: rotateY(180deg);
 
-      @include tablet {
-        right: 25px;
-      }
-
-      @include laptop {
-        right: 16px;
-      }
-
       @include desktop {
         right: 50px;
+      }
+
+      @include tablet {
+        right: 25px;
       }
     }
   }
@@ -88,13 +80,13 @@
         align-items: center;
         justify-content: center;
 
-        @include breakpoint(650px) {
-          height: 90%;
-          width: 100%;
-        }
-
         @include tablet {
           width: 75%;
+        }
+
+        @include breakpoint(650px) {
+          height: 90%;
+          width: 80%;
         }
 
         .left {
@@ -112,25 +104,30 @@
             align-items: center;
             justify-content: space-evenly;
 
+            @include breakpoint(650px) {
+              width: 150px;
+              overflow: hidden;
+            }
+
             @include phone {
               width: 75px;
               height: 25px;
-            }
-
-            @include breakpoint(650px) {
-              overflow: hidden;
             }
 
             img {
               width: 50px;
               cursor: pointer;
 
-              @include phone {
-                width: 20px;
+              @include tablet {
+                width: 40px;
               }
 
               @include breakpoint(650px) {
                 width: 25px;
+              }
+
+              @include phone {
+                width: 20px;
               }
             }
           }
@@ -138,13 +135,16 @@
           h2 {
             font-size: 40px;
 
-            @include phone {
-              font-size: 13px;
+            @include tablet {
+              font-size: 2rem;
             }
-
             @include breakpoint(650px) {
               font-size: 1.2rem;
               overflow: hidden;
+            }
+
+            @include phone {
+              font-size: 13px;
             }
           }
 
@@ -152,12 +152,12 @@
             font-family: Cabin;
             font-size: 20px;
 
-            @include phone {
-              font-size: 11px;
-            }
-
             @include breakpoint(650px) {
               font-size: 0.75rem;
+            }
+
+            @include phone {
+              font-size: 11px;
             }
           }
 
@@ -185,75 +185,34 @@
               font-size: 0.9rem;
               line-height: 1.5rem;
 
+              @include breakpoint(1075px) {
+                font-size: 0.85rem;
+              }
+
+              @include breakpoint(1015px) {
+                font-size: 0.8rem;
+              }
+
+              @include breakpoint(955px) {
+                font-size: 0.75rem;
+                line-height: 1.25rem;
+              }
+
+              @include breakpoint(650px) {
+                font-size: 0.5rem;
+                line-height: 0.6rem;
+              }
+
               @include phone {
                 font-size: 0.5rem;
                 line-height: 0.75rem;
                 overflow: hidden;
-              }
-
-              @include breakpoint(650px) {
-                font-size: 0.5rem;
-                line-height: 0.6rem;
-              }
-            }
-
-            p .desc {
-              @include breakpoint(900px) {
-                font-size: 0.5rem;
-              }
-
-              @include breakpoint(1010px) {
-                font-size: 0.7rem;
-                line-height: 1.25rem;
-              }
-
-              @include laptop {
-                font-size: 0.85rem;
-              }
-            }
-
-            p .tech {
-              @include phone {
-                font-size: 0.6rem;
-              }
-
-              @include breakpoint(650px) {
-                font-size: 0.5rem;
-                line-height: 0.6rem;
-              }
-
-              @include breakpoint(900px) {
-                font-size: 0.5rem;
-              }
-
-              @include breakpoint(1010px) {
-                font-size: 0.7rem;
-                line-height: 1.25rem;
-              }
-
-              @include laptop {
-                font-size: 0.85rem;
               }
             }
 
             .focus {
               @include phone {
                 display: none;
-              }
-            }
-            
-            p .focus {
-              @include breakpoint(900px) {
-                font-size: 0.5rem;
-              }
-
-              @include breakpoint(1010px) {
-                font-size: 0.7rem;
-                line-height: 1.25rem;
-              }
-
-              @include laptop {
-                font-size: 0.85rem;
               }
             }
           }

@@ -84,8 +84,8 @@ const Portfolio = () => {
               </div>
               <div className="right">
                 <div className="rightContainer">
-                  <p className="desc">{d.description}</p>
-                  <p className="tech">
+                  <p>{d.description}</p>
+                  <p>
                     TECH: <br></br>
                     {d.tech}
                   </p>
