@@ -29,8 +29,13 @@
         &:hover {
           color: #ff571a;
         }
+
         @include smallPhone {
           font-size: 1.8rem;
+        }
+
+        @include breakpoint(350px) {
+          font-size: 1.25rem;
         }
       }
 

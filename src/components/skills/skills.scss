@@ -6,6 +6,9 @@
   flex-direction: column;
   align-items: center;
 
+  @include tablet {
+    justify-content: space-around;
+  }
   @include phone {
     justify-content: space-around;
   }
@@ -25,6 +28,10 @@
     align-items: center;
     justify-content: center;
 
+    @include tablet {
+      flex-direction: column;
+      height: 100%;
+    }
     @include phone {
       flex-direction: column;
       height: 100%;
@@ -43,13 +50,13 @@
       padding: 20px;
       transition: all 1s ease;
 
+      @include tablet {
+        width: 80vw;
+        margin: 12px;
+      }
       @include phone {
         height: 100%;
         margin: 16px 0;
-      }
-
-      @include tablet {
-        margin: 0 12px;
       }
 
       &:hover {
@@ -62,9 +69,17 @@
 
       .top {
         display: flex;
+        flex: 1;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include tablet {
+          flex-direction: row;
+          justify-content: center;
+          overflow: hidden;
+          margin-bottom: 0.5rem;
+        }
 
         @include phone {
           flex-direction: row;
@@ -74,11 +89,16 @@
 
         img {
           &.icon {
-            height: 60px;
-            width: 60px;
+            height: 45px;
+            width: 45px;
             object-fit: cover;
             margin: 0 30px;
 
+            @include tablet {
+              width: 23px;
+              height: 23px;
+              margin: 0 1rem;
+            }
             @include phone {
               width: 20px;
               height: 20px;
@@ -87,9 +107,12 @@
           }
         }
         h3 {
-          margin: 1rem 0;
+          margin: 0.5rem 0;
           overflow: hidden;
 
+          @include tablet {
+            font-size: 1rem;
+          }
           @include phone {
             font-size: 14px;
           }
@@ -98,30 +121,61 @@
 
       .center {
         display: flex;
+        flex: 1;
         justify-content: center;
         padding: 10px;
         border-radius: 10px;
         background-color: rgb(250, 244, 245);
 
-        @include phone {
-          font-size: 10px;
+        @include breakpoint(1050px) {
+          font-size: 0.8rem;
+        }
+
+        @include breakpoint(875px) {
+          font-size: 0.8rem;
         }
 
         @include tablet {
-          font-size: .9rem;
+          height: 5rem;
+          padding: 10px 20px;
+          font-size: 0.6rem;
+        }
+
+        @include breakpoint(525px) {
+          font-size: 10px;
+        }
+
+        p {
+          @include tablet {
+            font-size: 10px;
+            overflow: hidden;
+          }
+          @include phone {
+            font-size: 8px;
+          }
+          @include smallPhone {
+            font-size: 7px;
+          }
         }
       }
+
       .bottom {
         display: flex;
+        flex: 4;
         align-items: center;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
 
         h4 {
           color: rgb(121, 115, 115);
           margin: 1rem 0;
           overflow: hidden;
 
+          @include tablet {
+            font-size: 0.75rem;
+            padding-bottom: 1rem;
+            margin: 0.25rem 0;
+          }
           @include phone {
             font-size: 13px;
             margin: 0.5rem 0;
@@ -131,6 +185,14 @@
           display: flex;
           flex-direction: column;
           margin-left: -40px;
+
+          @include tablet {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 75vw;
+            // font-size: 8px;
+          }
 
           @include phone {
             dipslay: flex;
@@ -147,12 +209,14 @@
             margin-bottom: 0.1rem;
             overflow: hidden;
 
+            @include breakpoint(875px) {
+              font-size: 0.8rem;
+            }
+            @include breakpoint(550px) {
+              font-size: 10px;
+            }
             @include phone {
               font-size: 8px;
-            }
-
-            @include tablet {
-              font-size: .9rem;
             }
           }
         }

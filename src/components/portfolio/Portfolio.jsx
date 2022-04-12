@@ -68,7 +68,7 @@ const Portfolio = () => {
               <div className="left">
                 <h2>{d.name}</h2>
                 <h4>{d.type}</h4>
-                <img src={`${d.image}`} alt="" />
+                <img className="demoPic" src={`${d.image}`} alt="" />
                 <div className="imgContainer">
                   <a href={`${d.path}`} target="_blank" rel="noreferrer">
                     <img src={d.link} alt="" />
@@ -84,8 +84,8 @@ const Portfolio = () => {
               </div>
               <div className="right">
                 <div className="rightContainer">
-                  <p className="desc">{d.description}</p>
-                  <p className="tech">
+                  <p>{d.description}</p>
+                  <p>
                     TECH: <br></br>
                     {d.tech}
                   </p>

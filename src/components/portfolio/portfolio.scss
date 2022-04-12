@@ -16,23 +16,19 @@
     position: absolute;
     cursor: pointer;
 
-    @include phone {
+    @include breakpoint(650px) {
       display: none;
     }
 
     &.left {
       left: 100px;
 
-      @include tablet {
-        left: 25px;
-      }
-
-      @include laptop {
-        left: 16px;
-      }
-
       @include desktop {
         left: 50px;
+      }
+
+      @include tablet {
+        left: 25px;
       }
     }
 
@@ -40,36 +36,27 @@
       right: 100px;
       transform: rotateY(180deg);
 
-      @include tablet {
-        right: 25px;
-      }
-
-      @include laptop {
-        right: 16px;
-      }
-
       @include desktop {
         right: 50px;
+      }
+
+      @include tablet {
+        right: 25px;
       }
     }
   }
 
   .slider {
-    height: 500px;
+    height: 60vh;
     display: flex;
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
 
-    @include phone {
-      height: 100vh;
+    @include breakpoint(650px) {
+      height: 85vh;
+      display: flex;
       flex-direction: column;
-      justify-content: center;
-      margin-top: 0rem;
-    }
-
-    @include tablet {
-      height: 60vh;
     }
 
     .container {
@@ -78,22 +65,27 @@
       align-items: center;
       justify-content: center;
 
+      @include breakpoint(650px) {
+        height: 90vh;
+        display: flex;
+        justify-content: space-around;
+      }
+
       .item {
-        width: 900px;
         height: 100%;
+        width: 65%;
         background-color: white;
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        @include phone {
-          width: 90%;
-          height: 225px;
-          margin: 15px 0;
+        @include tablet {
+          width: 75%;
         }
 
-        @include tablet {
+        @include breakpoint(650px) {
+          height: 90%;
           width: 80%;
         }
 
@@ -112,6 +104,11 @@
             align-items: center;
             justify-content: space-evenly;
 
+            @include breakpoint(650px) {
+              width: 150px;
+              overflow: hidden;
+            }
+
             @include phone {
               width: 75px;
               height: 25px;
@@ -121,13 +118,30 @@
               width: 50px;
               cursor: pointer;
 
+              @include tablet {
+                width: 40px;
+              }
+
+              @include breakpoint(650px) {
+                width: 25px;
+              }
+
               @include phone {
                 width: 20px;
               }
             }
           }
+
           h2 {
             font-size: 40px;
+
+            @include tablet {
+              font-size: 2rem;
+            }
+            @include breakpoint(650px) {
+              font-size: 1.2rem;
+              overflow: hidden;
+            }
 
             @include phone {
               font-size: 13px;
@@ -138,23 +152,17 @@
             font-family: Cabin;
             font-size: 20px;
 
+            @include breakpoint(650px) {
+              font-size: 0.75rem;
+            }
+
             @include phone {
               font-size: 11px;
             }
           }
 
-          img {
-            width: 400px;
-
-            @include phone {
-              width: 145px;
-              margin-left: 15px;
-            }
-
-            @include tablet {
-              width: 300px;
-              margin-left: 30px;
-            }
+          .demoPic {
+            width: 35vw;
           }
         }
 
@@ -174,18 +182,37 @@
 
             p {
               font-family: Cabin;
-              font-size: 1rem;
+              font-size: 0.9rem;
               line-height: 1.5rem;
+
+              @include breakpoint(1075px) {
+                font-size: 0.85rem;
+              }
+
+              @include breakpoint(1015px) {
+                font-size: 0.8rem;
+              }
+
+              @include breakpoint(955px) {
+                font-size: 0.75rem;
+                line-height: 1.25rem;
+              }
+
+              @include breakpoint(650px) {
+                font-size: 0.5rem;
+                line-height: 0.6rem;
+              }
 
               @include phone {
                 font-size: 0.5rem;
-                line-height: 0.5rem;
+                line-height: 0.75rem;
                 overflow: hidden;
               }
+            }
 
-              @include tablet {
-                font-size: 0.8rem;
-                line-height: 1.25rem;
+            .focus {
+              @include phone {
+                display: none;
               }
             }
           }

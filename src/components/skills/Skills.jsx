@@ -79,7 +79,9 @@ const Skills = () => {
               <img className="icon" src={d.icon} alt="" />
               <h3>{d.title}</h3>
             </div>
-            <div className="center">{d.blurb}</div>
+            <div className="center">
+              <p>{d.blurb}</p>
+            </div>
             <div className="bottom">
               <h4>{d.list}</h4>
               <ul>
