@@ -10,6 +10,10 @@
     justify-content: space-around;
   }
 
+  @include tablet {
+    justify-content: space-around;
+  }
+
   h1 {
     font-size: 50px;
 
@@ -26,6 +30,11 @@
     justify-content: center;
 
     @include phone {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    @include tablet {
       flex-direction: column;
       height: 100%;
     }
@@ -49,7 +58,8 @@
       }
 
       @include tablet {
-        margin: 0 12px;
+        width: 80vw;
+        margin: 12px;
       }
 
       &:hover {
@@ -62,6 +72,7 @@
 
       .top {
         display: flex;
+        flex: 1;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -70,6 +81,13 @@
           flex-direction: row;
           justify-content: center;
           overflow: hidden;
+        }
+
+        @include tablet {
+          flex-direction: row;
+          justify-content: center;
+          overflow: hidden;
+          margin-bottom: 0.5rem;
         }
 
         img {
@@ -84,6 +102,12 @@
               height: 20px;
               margin: 0 1rem;
             }
+
+            @include tablet {
+              width: 25px;
+              height: 25px;
+              margin: 0 1rem;
+            }
           }
         }
         h3 {
@@ -93,26 +117,53 @@
           @include phone {
             font-size: 14px;
           }
+
+          @include tablet {
+            font-size: 1rem;
+          }
         }
       }
 
       .center {
         display: flex;
+        flex: 1;
         justify-content: center;
         padding: 10px;
         border-radius: 10px;
         background-color: rgb(250, 244, 245);
 
-        @include phone {
+        @include breakpoint(525px) {
           font-size: 10px;
         }
 
         @include tablet {
-          font-size: .9rem;
+          height: 5rem;
+          padding: 10px 20px;
+          font-size: 0.6rem;
+        }
+
+        @include breakpoint(875px) {
+          font-size: 0.8rem;
+        }
+
+        p {
+          @include smallPhone {
+            font-size: 6px;
+          }
+
+          @include phone {
+            font-size: 8px;
+          }
+
+          @include tablet {
+            font-size: 12px;
+          }
         }
       }
+
       .bottom {
         display: flex;
+        flex: 4;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -123,8 +174,16 @@
           overflow: hidden;
 
           @include phone {
+            //480px
             font-size: 13px;
             margin: 0.5rem 0;
+          }
+
+          @include tablet {
+            //768px
+            font-size: 0.75rem;
+            padding-bottom: 1rem;
+            margin: 0.25rem 0;
           }
         }
         ul {
@@ -140,6 +199,14 @@
             height: 80px;
           }
 
+          @include tablet {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 75vw;
+            font-size: 8px;
+          }
+
           li {
             font-family: Cabin;
             display: flex;
@@ -151,8 +218,12 @@
               font-size: 8px;
             }
 
-            @include tablet {
-              font-size: .9rem;
+            // @include tablet {
+            //   font-size: 10px;
+            // }
+
+            @include breakpoint(875px) {
+              font-size: 0.8rem;
             }
           }
         }

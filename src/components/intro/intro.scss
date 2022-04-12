@@ -9,6 +9,11 @@
     align-items: center;
   }
 
+  @include breakpoint(660px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .left {
     flex: 0.5;
     overflow: hidden;
@@ -30,18 +35,27 @@
         padding-right: 4rem;
       }
 
-      @include phone {
+      @include breakpoint(660px) {
         align-items: flex-start;
+        height: 35rem;
         padding-top: 1rem;
-        padding-right: 0.4rem;
       }
     }
 
     img {
       height: 90%;
 
+      @include smallPhone {
+        margin-top: 3.5%;
+        margin-left: 3%;
+      }
+
       @include phone {
-        height: 60%;
+        margin-top: 4.75%;
+      }
+
+      @include breakpoint(660px) {
+        height: 59%;
       }
     }
   }
@@ -51,7 +65,7 @@
     position: relative;
 
     @include phone {
-      margin-top: -5rem;
+      margin-top: -4rem;
     }
 
     .wrapper {
@@ -76,6 +90,13 @@
         align-items: center;
       }
 
+      @include breakpoint(660px) {
+        display: flex;
+        padding-left: 0.5rem;
+        justify-content: center;
+        align-items: center;
+      }
+
       h1 {
         color: black;
         font-size: 3.75rem;
@@ -87,6 +108,14 @@
           display: none;
         }
 
+        @include breakpoint(518px) {
+          display: none;
+        }
+
+        @include laptop {
+          font-size: 2rem;
+        }
+
         @include desktop {
           font-size: 3.25rem;
         }
@@ -95,7 +124,7 @@
       .mobileH {
         display: none;
 
-        @include phone {
+        @include breakpoint(518px) {
           display: flex;
           font-size: 50px;
           margin-bottom: 0.25rem;
@@ -104,7 +133,7 @@
       .mobileW {
         display: none;
 
-        @include phone {
+        @include breakpoint(518px) {
           display: flex;
           font-size: 60px;
           font-weight: 700;
@@ -165,6 +194,10 @@
 
         @include phone {
           padding-left: 1.5rem;
+        }
+
+        @include breakpoint(660px) {
+          padding-left: 2.75rem;
         }
       }
 
