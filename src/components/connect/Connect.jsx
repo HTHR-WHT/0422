@@ -30,7 +30,6 @@ const Connect = () => {
       <div className="bottom">
         <InlineWidget
           url="https://calendly.com/heatherwhitenyc/connect-chat"
-          // style={{ minWidth: "320px", height: "750px" }}
         />
       </div>
     </div>
