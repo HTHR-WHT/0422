@@ -1,4 +1,4 @@
-import resume from "./hWhite_resume.pdf";
+import resume from "./hw_resume_2022.pdf";
 import "./connect.scss";
 import { InlineWidget } from "react-calendly";
 
